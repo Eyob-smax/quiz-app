@@ -100,8 +100,6 @@ function selectAnswer(selectedAnswer, correctAnswer) {
     const timeLeft = totalTime - elapsedTime;
     const calculatedScore = Math.floor((timeLeft / totalTime) * 1000);
     toatalScore += calculatedScore;
-
-    console.log("Score: ", toatalScore, calculatedScore);
   }
 }
 
@@ -165,6 +163,9 @@ function endGame() {
 
 async function saveHighScore() {
   const name = prompt("Enter your name for high score!");
+  if (!name) {
+    name = "Anonymous";
+  }
   const date = new Date().toLocaleDateString();
   loader.classList.remove("hidden");
   let createdAt = new Date().getTime();
