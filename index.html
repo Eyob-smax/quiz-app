@@ -8,32 +8,24 @@
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NSc5z7VfZ+gk9aGJ7qz4+gFj2q2z2O6qnm+"
-      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="quiz-container">
-      <div id="quiz-box" hidden>
+      <div class="" id="quiz-box">
         <h1 id="question-number">Question 1</h1>
-        <h2 id="question-test">What is going to be the first question?</h2>
+        <h2 id="question-text">What is going to be the first question?</h2>
         <div id="timer">Time Left <span id="time-left">10</span></div>
-        <div id="choice-container">
-          <button type="button" class="choice-button" id="A">Choice A</button>
-          <button type="button" class="choice-button" id="B">Choice B</button>
-          <button type="button" class="choice-button" id="C">Choice C</button>
-          <button type="button" class="choice-button" id="D">Choice D</button>
-        </div>
-        <button id="next-btn" class="btn" disabled>Next</button>
+        <div id="choice-container"></div>
+        <button id="next-btn" class="btn">Next</button>
       </div>
 
-      <div id="loader" hidden>
+      <div class="loader hidden">
         <h2>Loading High Scores...</h2>
       </div>
 
-      <div id="high-score-container">
+      <div style="display: none" id="high-score-container">
         <table>
           <thead>
             <tr>
@@ -42,7 +34,22 @@
               <th>Date</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="high-score-list">
+            <tr class="highlight">
+              <td>Jacinto</td>
+              <td>9876</td>
+              <td>2024-09-12</td>
+            </tr>
+            <tr>
+              <td>Jacinto</td>
+              <td>9876</td>
+              <td>2024-09-12</td>
+            </tr>
+            <tr>
+              <td>Jacinto</td>
+              <td>9876</td>
+              <td>2024-09-12</td>
+            </tr>
             <tr>
               <td>Jacinto</td>
               <td>9876</td>
@@ -54,5 +61,7 @@
         <button type="button" id="play-again-btn" class="btn">Play</button>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
