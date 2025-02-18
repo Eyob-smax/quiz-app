@@ -16,7 +16,7 @@ const TRIVIA_BASE_URL =
 const PANTRY_API_URL =
   "https://proxy-api-git-main-eyobs-projects-744eeb5a.vercel.app/quiz-scores";
 
-let currentQuestionIndex = 9;
+let currentQuestionIndex = 0;
 let questions = [];
 let timer;
 let totalTime = 10000;
@@ -228,5 +228,9 @@ displayHighScores = (newScore) => {
     highScoreList.appendChild(row);
   });
 };
+
+playAgainBtn.addEventListener("click", (e) => {
+  window.location.reload();
+});
 
 fetchQuestions();
