@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NSc5z7VfZ+gk9aGJ7qz4+gFj2q2z2O6qnm+"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="quiz-container">
+      <div id="quiz-box" hidden>
+        <h1 id="question-number">Question 1</h1>
+        <h2 id="question-test">What is going to be the first question?</h2>
+        <div id="timer">Time Left <span id="time-left">10</span></div>
+        <div id="choice-container">
+          <button type="button" class="choice-button" id="A">Choice A</button>
+          <button type="button" class="choice-button" id="B">Choice B</button>
+          <button type="button" class="choice-button" id="C">Choice C</button>
+          <button type="button" class="choice-button" id="D">Choice D</button>
+        </div>
+        <button id="next-btn" class="btn" disabled>Next</button>
+      </div>
+
+      <div id="loader" hidden>
+        <h2>Loading High Scores...</h2>
+      </div>
+
+      <div id="high-score-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Score</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jacinto</td>
+              <td>9876</td>
+              <td>2024-09-12</td>
+            </tr>
+          </tbody>
+          <tbody id="high-scores"></tbody>
+        </table>
+        <button type="button" id="play-again-btn" class="btn">Play</button>
+      </div>
+    </div>
+  </body>
+</html>
